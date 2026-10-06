@@ -161,7 +161,6 @@ main{max-width:900px}
 .delivery-fields label{margin-bottom:9px}
 .order input{height:49px;margin-top:4px}
 .order button{margin-top:2px}
-section{content-visibility:auto;contain-intrinsic-size:700px}
 .hero,.proof{content-visibility:visible}
 img{decoding:async}
 @media(max-width:700px){
