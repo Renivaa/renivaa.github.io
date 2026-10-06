@@ -90,3 +90,40 @@ main{width:100%}.topbar{gap:10px;font-size:8px}.hero{padding-top:26px}.hero h1{f
 }
 @media(max-width:380px){.hero h1{font-size:40px}.proof strong{font-size:8px}.proof small{display:none}.cta strong{font-size:13px}.sticky{min-height:56px}.sticky>strong{font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta{transition:none}}
+
+
+/* RENIVA visual refinement v3 */
+body{background:#eee8dc}
+main{max-width:900px}
+.topbar{position:relative;z-index:3}
+.hero{padding:28px 22px 0;min-height:0}
+.hero-copy{padding-bottom:22px}
+.hero h1{margin:9px 0 13px}
+.hero-copy>p{margin-bottom:14px}
+.hero-tags{margin-bottom:15px}
+.hero-media{border-radius:18px 18px 0 0;box-shadow:0 -8px 35px rgba(24,42,34,.08)}
+.hero-media img{max-height:720px}
+.proof>div{min-height:78px}
+.statement{padding:62px 24px 58px}
+.image-story{padding:62px 20px 66px}
+.story-copy{margin-bottom:24px}
+.dark-section{padding:66px 24px}
+.result-section,.routine,.social,.offers,.order,.faq{padding-top:64px;padding-bottom:64px}
+.quote{padding:62px 22px}
+.final{padding:70px 22px 88px}
+.offer-visual{margin-top:25px}
+.order{gap:38px}
+.faq details{margin:4px auto}
+.sticky{bottom:9px}
+@media(max-width:700px){
+ .hero{padding:22px 14px 0}
+ .hero h1{font-size:42px}
+ .hero-media{border-radius:14px 14px 0 0}
+ .statement,.image-story,.result-section,.routine,.social,.offers,.faq{padding-top:52px;padding-bottom:54px}
+ .dark-section{padding:54px 18px}
+ .quote{padding:52px 18px}
+ .order{padding-top:54px;padding-bottom:54px}
+ .final{padding-top:60px;padding-bottom:92px}
+ .story-copy{margin-bottom:20px}
+}
+@media(max-width:380px){.hero h1{font-size:38px}}
