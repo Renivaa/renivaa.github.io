@@ -300,3 +300,7 @@ img{decoding:async}
 /* Checkout navigation stability: do not virtualize the order section.
    Hash navigation must always resolve to the real checkout position. */
 main>section{content-visibility:visible;contain:none}
+
+
+/* Checkout navigation v7: keep the destination aligned at the viewport top. */
+#order{scroll-margin-top:0;overflow-anchor:none}
