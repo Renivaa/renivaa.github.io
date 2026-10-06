@@ -21,22 +21,11 @@ document.addEventListener("DOMContentLoaded",()=>{
   });
 });
 
-/* RENIVA checkout navigation: never rely on hash scrolling. */
+/* RENIVA checkout navigation — structural, hash-free, and independent of lazy images. */
 function goToCheckout(){
   const target=document.getElementById("order");
   if(!target)return false;
-  target.style.contentVisibility="visible";
-  target.style.contain="none";
-  const top=Math.max(0,target.getBoundingClientRect().top+window.pageYOffset-8);
-  window.scrollTo(0,top);
-  requestAnimationFrame(()=>{
-    const y=Math.max(0,target.getBoundingClientRect().top+window.pageYOffset-8);
-    window.scrollTo(0,y);
-  });
-  setTimeout(()=>{
-    const y=Math.max(0,target.getBoundingClientRect().top+window.pageYOffset-8);
-    window.scrollTo(0,y);
-  },120);
+  target.scrollIntoView({behavior:"instant",block:"start",inline:"nearest"});
   return true;
 }
 
@@ -44,7 +33,6 @@ document.addEventListener("click",event=>{
   const link=event.target.closest("a[data-order-link]");
   if(!link)return;
   event.preventDefault();
-  event.stopPropagation();
+  event.stopImmediatePropagation();
   goToCheckout();
-  history.replaceState(null,"","#order");
 },true);
