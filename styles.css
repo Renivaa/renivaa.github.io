@@ -127,3 +127,20 @@ main{max-width:900px}
  .story-copy{margin-bottom:20px}
 }
 @media(max-width:380px){.hero h1{font-size:38px}}
+
+
+/* Single checkout + package selector */
+.package-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:0 0 10px}
+.package-title span{font-size:9px;color:#8d6b3b;font-weight:800}
+.package-title strong{font-size:11px;color:var(--green)}
+.checkout-offers{margin:0 0 14px}
+.checkout-offers .offer{padding:13px 12px}
+.checkout-offers .offer-copy strong{font-size:13px}
+.checkout-offers .offer-copy em{font-size:9px}
+.checkout-offers .offer>b{font-size:23px}
+.form-message.success{color:#356446}
+@media(max-width:700px){
+ .package-title{align-items:flex-start;flex-direction:column;gap:2px}
+ .checkout-offers{gap:7px}
+ .checkout-offers .offer{padding:12px 10px}
+}
