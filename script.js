@@ -1,27 +1,11 @@
 document.addEventListener("DOMContentLoaded",()=>{
   const form=document.getElementById("order-form");
   const message=document.getElementById("form-message");
-  const offers={
-    "1":"169 ريال — عبوة واحدة · تكفيك شهرين",
-    "2":"199 ريال — عبوتان · تكفيك 4 أشهر",
-    "3":"219 ريال — 3 عبوات · تكفيك 6 أشهر"
-  };
-
-  document.querySelectorAll('a[href="#order"]').forEach(link=>{
-    link.addEventListener("click",event=>{
-      const target=document.getElementById("order");
-      if(!target) return;
-      event.preventDefault();
-      history.pushState(null,"","#order");
-      target.scrollIntoView({behavior:"smooth",block:"start"});
-    });
-  });
 
   document.querySelectorAll('input[name="offer"]').forEach(input=>{
     input.addEventListener("change",()=>{
-      if(input.checked) input.closest(".offer")?.classList.add("is-selected");
       document.querySelectorAll('input[name="offer"]').forEach(other=>{
-        if(other!==input) other.closest(".offer")?.classList.remove("is-selected");
+        other.closest(".offer")?.classList.toggle("is-selected",other===input && other.checked);
       });
     });
   });
@@ -36,3 +20,23 @@ document.addEventListener("DOMContentLoaded",()=>{
     message.className="form-message success";
   });
 });
+
+/* Same first-tap checkout navigation pattern used on XCORE FIT.
+   The click is intercepted immediately, the browser does not animate through
+   the page, and the target position is re-checked after layout settles. */
+function scrollToOrderStart(){
+  const target=document.getElementById("order");
+  if(!target)return;
+  const top=Math.max(0,window.pageYOffset+target.getBoundingClientRect().top-8);
+  window.scrollTo({top,left:0,behavior:"auto"});
+}
+
+document.addEventListener("click",event=>{
+  const link=event.target.closest('a[href="#order"], a[href="/#order"]');
+  if(!link)return;
+  event.preventDefault();
+  scrollToOrderStart();
+  requestAnimationFrame(()=>requestAnimationFrame(scrollToOrderStart));
+  setTimeout(scrollToOrderStart,180);
+  setTimeout(scrollToOrderStart,480);
+},{capture:true});
