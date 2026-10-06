@@ -275,3 +275,20 @@ img{decoding:async}
  .delivery-fields{gap:8px}
  .delivery-fields input{height:50px!important}
 }
+
+/* CTA readability + navigation stability */
+.cta{min-height:70px;padding:11px 14px 11px 18px}
+.cta strong{font-size:17px;line-height:1.35}
+.cta small{font-size:10px}
+.sticky{min-height:66px;padding:9px 13px 9px 17px}
+.sticky span b{font-size:15px}
+.sticky span small{font-size:9px}
+.sticky>strong{font-size:12px;padding:9px 11px}
+@media(max-width:700px){
+ .cta{min-height:68px}
+ .cta strong{font-size:16px}
+ .cta small{font-size:9px}
+ .sticky{min-height:62px}
+ .sticky span b{font-size:14px}
+ .sticky>strong{font-size:11px}
+}
