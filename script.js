@@ -21,22 +21,30 @@ document.addEventListener("DOMContentLoaded",()=>{
   });
 });
 
-/* Same first-tap checkout navigation pattern used on XCORE FIT.
-   The click is intercepted immediately, the browser does not animate through
-   the page, and the target position is re-checked after layout settles. */
-function scrollToOrderStart(){
+/* RENIVA checkout navigation: never rely on hash scrolling. */
+function goToCheckout(){
   const target=document.getElementById("order");
-  if(!target)return;
-  const top=Math.max(0,window.pageYOffset+target.getBoundingClientRect().top-8);
-  window.scrollTo({top,left:0,behavior:"auto"});
+  if(!target)return false;
+  target.style.contentVisibility="visible";
+  target.style.contain="none";
+  const top=Math.max(0,target.getBoundingClientRect().top+window.pageYOffset-8);
+  window.scrollTo(0,top);
+  requestAnimationFrame(()=>{
+    const y=Math.max(0,target.getBoundingClientRect().top+window.pageYOffset-8);
+    window.scrollTo(0,y);
+  });
+  setTimeout(()=>{
+    const y=Math.max(0,target.getBoundingClientRect().top+window.pageYOffset-8);
+    window.scrollTo(0,y);
+  },120);
+  return true;
 }
 
 document.addEventListener("click",event=>{
-  const link=event.target.closest('a[href="#order"], a[href="/#order"]');
+  const link=event.target.closest("a[data-order-link]");
   if(!link)return;
   event.preventDefault();
-  scrollToOrderStart();
-  requestAnimationFrame(()=>requestAnimationFrame(scrollToOrderStart));
-  setTimeout(scrollToOrderStart,180);
-  setTimeout(scrollToOrderStart,480);
-},{capture:true});
+  event.stopPropagation();
+  goToCheckout();
+  history.replaceState(null,"","#order");
+},true);
