@@ -235,3 +235,43 @@ img{decoding:async}
  .delivery-fields label:first-child{grid-column:1/-1}
  .checkout-bottom{gap:8px}
 }
+
+/* Checkout clarity refinement v5 */
+.checkout-section{padding:72px 20px 86px}
+.checkout-shell{max-width:760px}
+.checkout-head{text-align:center;display:block;margin:0 auto 28px}
+.checkout-head h2{font-size:clamp(42px,6vw,60px);margin:8px 0 9px}
+.checkout-head p{font-size:11px;color:#cdd5d0;margin:0}
+.checkout-card{padding:28px 30px;border-radius:18px}
+.checkout-label{font-size:13px;font-weight:800;color:#182a22;margin:0 0 12px}
+.checkout-offers{gap:10px;margin-bottom:12px}
+.checkout-offers .offer{min-height:92px;padding:14px 13px;grid-template-columns:21px minmax(0,1fr) auto;grid-template-rows:1fr;align-items:center}
+.checkout-offers .offer .radio{grid-row:1}
+.checkout-offers .offer-copy{grid-column:2;display:block}
+.checkout-offers .offer-copy strong{font-size:15px;display:block;line-height:1.4}
+.checkout-offers .offer-copy small{font-size:10px;display:block;margin-top:2px;color:#81796e}
+.checkout-offers .offer>b{grid-column:3;grid-row:1;font-size:24px;margin:0}
+.checkout-summary{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:#eee7db;border:1px solid #d8ccbc;border-radius:10px;margin-bottom:26px;font-size:10px;color:#777066}
+.checkout-summary strong{font-size:11px;color:#182a22}
+.customer-label{padding-top:0}
+.delivery-fields{grid-template-columns:1fr 1fr;gap:11px 10px;margin-bottom:14px}
+.delivery-fields label:first-child{grid-column:1/-1}
+.delivery-fields label{font-size:10px}
+.delivery-fields input{height:52px!important;margin-top:5px!important;font-size:13px!important}
+.checkout-card button{min-height:58px;font-size:14px;border-radius:11px}
+.checkout-note{text-align:center;font-size:8px;color:#81796e;margin-top:9px}
+@media(max-width:700px){
+ .checkout-section{padding:58px 13px 78px}
+ .checkout-card{padding:21px 17px;border-radius:16px}
+ .checkout-head{margin-bottom:21px}
+ .checkout-head h2{font-size:43px}
+ .checkout-label{font-size:12px;margin-bottom:10px}
+ .checkout-offers{gap:7px}
+ .checkout-offers .offer{min-height:68px;padding:10px 11px}
+ .checkout-offers .offer-copy strong{font-size:13px}
+ .checkout-offers .offer-copy small{font-size:9px}
+ .checkout-offers .offer>b{font-size:21px}
+ .checkout-summary{margin-bottom:22px}
+ .delivery-fields{gap:8px}
+ .delivery-fields input{height:50px!important}
+}
