@@ -304,3 +304,62 @@ main>section{content-visibility:visible;contain:none}
 
 /* Checkout navigation v7: keep the destination aligned at the viewport top. */
 #order{scroll-margin-top:0;overflow-anchor:none}
+
+
+/* RENIVA checkout — matched to Cosma checkout UX */
+.checkout-section{padding:52px 18px 72px;background:linear-gradient(180deg,#182a22 0%,#112019 100%);color:#fff}
+.checkout-shell{max-width:760px;margin:0 auto}
+.checkout-head{text-align:center;display:block;margin:0 auto 18px}
+.checkout-head h2{font-family:"Playfair Display","IBM Plex Sans Arabic",serif;font-size:clamp(38px,5vw,56px);line-height:1.08;margin:7px 0 9px;letter-spacing:-.035em}
+.checkout-head h2 em{font-style:normal;color:#d8bb7c}
+.checkout-head p{margin:0;color:#c8d1cb;font-size:11px;line-height:1.9}
+.checkout-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin:0 auto 14px}
+.checkout-trust span{border:1px solid #ffffff24;border-radius:999px;padding:6px 10px;color:#d9e1dc;font-size:9px;white-space:nowrap}
+.checkout-card{max-width:700px;margin:0 auto;background:#fbf8f2;color:#171b17;border:1px solid #ffffff25;border-radius:18px;padding:24px;box-shadow:0 25px 70px #07110c66}
+.checkout-label{font-size:13px;font-weight:800;color:#182a22;margin:0 0 12px}
+.checkout-offers{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 14px}
+.checkout-offers .offer{position:relative;display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:center;min-height:72px;padding:12px 13px;margin:0;border:1px solid #d5cabb;border-radius:13px;background:#fff;cursor:pointer}
+.checkout-offers .offer input{position:absolute;opacity:0;pointer-events:none}
+.checkout-offers .offer .radio{width:21px;height:21px;border:1px solid #9e907b;border-radius:50%;display:grid;place-items:center}
+.checkout-offers .offer:has(input:checked){border-color:#182a22;box-shadow:0 0 0 1px #182a22,0 10px 24px #182a2212;background:#f8fbff}
+.checkout-offers .offer:has(input:checked) .radio:after{content:"";width:9px;height:9px;border-radius:50%;background:#182a22}
+.checkout-offers .offer-copy{display:flex;flex-direction:column;min-width:0}
+.checkout-offers .offer-copy strong{font-size:15px;color:#182a22;line-height:1.35}
+.checkout-offers .offer-copy small{font-size:10px;color:#7a746d;margin-top:3px}
+.checkout-offers .offer>b{font:600 24px/1 "Playfair Display";color:#182a22;white-space:nowrap}
+.checkout-offers .offer>b i{font:normal 8px "IBM Plex Sans Arabic"}
+.checkout-offers .offer.featured{border-color:#b79052;background:linear-gradient(135deg,#fffdf8,#fff7df)}
+.checkout-offers .badge{position:absolute;top:-9px;right:13px;padding:3px 9px;border-radius:999px;background:#182a22;color:#fff;font-size:8px;font-weight:700}
+.checkout-divider{height:1px;background:#ddd3c5;margin:17px 0}
+.delivery-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.delivery-fields label:first-child{grid-column:1/-1}
+.delivery-fields label{display:block;margin:0!important;font-size:10px!important;font-weight:800;color:#3d433f}
+.delivery-fields input{display:block;width:100%;height:53px!important;margin-top:5px!important;padding:0 13px!important;border:1px solid #cfc3b3!important;border-radius:10px!important;background:#fff;font:13px "IBM Plex Sans Arabic"!important;outline:none;direction:rtl;text-align:right}
+.delivery-fields input:focus{border-color:#b79052!important;box-shadow:0 0 0 3px #b7905222}
+.checkout-card button{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:58px;margin:2px 0 0;border:0;border-radius:11px;background:linear-gradient(135deg,#d8bb7c,#a97c3e);color:#19140d;font:800 14px "IBM Plex Sans Arabic";padding:7px 12px 7px 17px;cursor:pointer;box-shadow:0 10px 25px #182a2225}
+.checkout-card button b{display:grid;place-items:center;width:38px;height:38px;border-radius:9px;background:#1d180f14;font-size:18px}
+.checkout-bottom{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:9px;color:#857d72;font-size:8px}
+.checkout-bottom span{white-space:nowrap}
+.checkout-card .form-message{min-height:18px;text-align:center;color:#356446;font-size:10px;margin:8px 0 0}
+.checkout-card .form-message.success{color:#356446}
+.bottom-note{text-align:center;color:#d8bb7c;font-weight:700;font-size:12px;margin:17px 0 0}
+@media(max-width:700px){
+ .checkout-section{padding:44px 12px 68px}
+ .checkout-head{margin-bottom:16px}
+ .checkout-head h2{font-size:40px}
+ .checkout-head p{font-size:10px}
+ .checkout-trust{gap:5px;margin-bottom:13px}
+ .checkout-trust span{font-size:8px;padding:5px 8px}
+ .checkout-card{padding:15px;border-radius:15px}
+ .checkout-label{font-size:12px;margin-bottom:10px}
+ .checkout-offers{gap:7px}
+ .checkout-offers .offer{min-height:64px;padding:10px 11px}
+ .checkout-offers .offer-copy strong{font-size:13px}
+ .checkout-offers .offer-copy small{font-size:9px}
+ .checkout-offers .offer>b{font-size:21px}
+ .delivery-fields{grid-template-columns:1fr;gap:9px}
+ .delivery-fields label:first-child{grid-column:auto}
+ .delivery-fields input{height:51px!important}
+ .checkout-card button{min-height:58px;font-size:13px}
+ .checkout-bottom{gap:8px;font-size:7px}
+}
