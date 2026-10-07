@@ -116,30 +116,23 @@ document.addEventListener("click",event=>{
 const sticky=document.querySelector(".sticky");
 const order=document.getElementById("order");
 if(sticky&&order){
-  let dismissed=false;
-  const hide=()=>{
-    if(dismissed)return;
-    dismissed=true;
-    sticky.classList.add("is-hidden");
-  };
-  const check=()=>{
-    if(dismissed)return;
+  const updateSticky=()=>{
     const r=order.getBoundingClientRect();
     const vh=window.visualViewport?window.visualViewport.height:window.innerHeight;
-    if(r.top<=vh*.88)hide();
+    const inCheckout=r.top<=vh*.88&&r.bottom>=0;
+    sticky.classList.toggle("is-hidden",inCheckout);
   };
   sticky.addEventListener("click",event=>{
     event.preventDefault();
-    hide();
+    sticky.classList.add("is-hidden");
     goToCheckout();
   });
-  order.addEventListener("focusin",hide);
-  order.addEventListener("pointerdown",hide,{passive:true});
-  window.addEventListener("scroll",check,{passive:true});
-  window.addEventListener("resize",check,{passive:true});
+  order.addEventListener("focusin",()=>sticky.classList.add("is-hidden"));
+  window.addEventListener("scroll",updateSticky,{passive:true});
+  window.addEventListener("resize",updateSticky,{passive:true});
   if(window.visualViewport){
-    window.visualViewport.addEventListener("resize",check,{passive:true});
-    window.visualViewport.addEventListener("scroll",check,{passive:true});
+    window.visualViewport.addEventListener("resize",updateSticky,{passive:true});
+    window.visualViewport.addEventListener("scroll",updateSticky,{passive:true});
   }
-  requestAnimationFrame(check);
+  requestAnimationFrame(updateSticky);
 }
