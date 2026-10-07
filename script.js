@@ -81,6 +81,15 @@ document.addEventListener("DOMContentLoaded",()=>{
     const selected=form.querySelector('input[name="offer"]:checked');
     if(!selected)return;
 
+    if(typeof window.snaptr==="function"){
+      snaptr("track","ADD_CART",{
+        item_category:"RENIVA",
+        item_ids:["RENIVA"],
+        price:Number(selected.dataset.price||0),
+        currency:"SAR"
+      });
+    }
+
     submit.disabled=true;
     submit.querySelector("span").textContent="جارٍ تجهيز طلبك…";
     setMessage("تم التحقق من البيانات. سننتقل معك لتأكيد الطلب.","success");
@@ -93,20 +102,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   updateOffer();
 
-  // Snap Pixel: track a high-intent order attempt, not a purchase.
-  // PURCHASE is intentionally not fired here because the current checkout
-  // does not yet have a confirmed server-side order/transaction.
-  form.addEventListener("submit",()=>{
-    if(typeof window.snaptr!=="function")return;
-    const selected=form.querySelector('input[name="offer"]:checked');
-    if(!selected || !validate())return;
-    snaptr("track","ADD_CART",{
-      item_category:"RENIVA",
-      item_ids:["RENIVA"],
-      price:Number(selected.dataset.price||0),
-      currency:"SAR"
-    });
-  });
+
 });
 
 function goToCheckout(){
