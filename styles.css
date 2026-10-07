@@ -951,3 +951,29 @@ main>section{content-visibility:visible;contain:none}
   }
   .checkout-offers .offer-price b{font-size:24px!important}
 }
+
+
+/* RENIVA spacing polish v23 — tighter text/image rhythm */
+.statement{padding-bottom:28px!important}
+.image-story{padding-top:28px!important}
+.image-story figure{margin-top:0!important}
+.image-story figcaption{margin-top:4px!important}
+.story-copy{margin-top:26px!important;margin-bottom:18px!important}
+.result-section{padding-top:42px!important}
+.section-head{margin-bottom:24px!important}
+.routine{padding-top:42px!important}
+.social{padding-top:42px!important}
+@media(max-width:700px){
+ .statement{padding-top:48px!important;padding-bottom:18px!important}
+ .image-story{padding-top:18px!important;padding-bottom:42px!important}
+ .story-copy{margin-top:20px!important;margin-bottom:12px!important}
+ .result-section{padding-top:36px!important}
+ .section-head{margin-bottom:20px!important}
+ .routine{padding-top:36px!important}
+ .social{padding-top:36px!important}
+}
+@media(max-width:380px){
+ .statement{padding-bottom:14px!important}
+ .image-story{padding-top:14px!important}
+ .story-copy{margin-top:16px!important}
+}
