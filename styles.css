@@ -867,3 +867,87 @@ main>section{content-visibility:visible;contain:none}
  .checkout-card button{font-size:15px!important}
  .checkout-bottom{gap:9px!important;font-size:8px!important}
 }
+
+
+/* RENIVA offer clarity v19 — package count + usage duration */
+.checkout-offers .offer{
+  min-height:112px!important;
+}
+.checkout-offers .offer-copy{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+  gap:3px!important;
+}
+.checkout-offers .offer-copy small{
+  font-size:9px!important;
+  color:#9a7947!important;
+  line-height:1.2!important;
+}
+.checkout-offers .offer-copy strong{
+  font-size:14px!important;
+  line-height:1.25!important;
+  margin:0!important;
+}
+.checkout-offers .offer-copy em{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:5px!important;
+  margin-top:4px!important;
+  padding:4px 8px!important;
+  border-radius:6px!important;
+  background:#eee5d6!important;
+  color:#182a22!important;
+  font-size:12px!important;
+  font-weight:800!important;
+  line-height:1.35!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+  white-space:nowrap!important;
+}
+.checkout-offers .offer-copy .offer-sep{
+  color:#b79052!important;
+  font-weight:900!important;
+}
+.checkout-offers .offer-price{
+  width:92px!important;
+  padding-inline-start:10px!important;
+}
+.checkout-offers .offer-price b{
+  font-size:30px!important;
+}
+@media(max-width:700px){
+  .checkout-offers .offer{
+    min-height:92px!important;
+    grid-template-columns:22px minmax(0,1fr) 82px!important;
+  }
+  .checkout-offers .offer-copy small{font-size:8px!important}
+  .checkout-offers .offer-copy strong{font-size:14px!important}
+  .checkout-offers .offer-copy em{
+    font-size:11px!important;
+    padding:4px 7px!important;
+    margin-top:3px!important;
+  }
+  .checkout-offers .offer-price{
+    width:82px!important;
+    padding-inline-start:7px!important;
+  }
+  .checkout-offers .offer-price b{font-size:27px!important}
+}
+@media(max-width:380px){
+  .checkout-offers .offer{
+    min-height:88px!important;
+    grid-template-columns:20px minmax(0,1fr) 72px!important;
+  }
+  .checkout-offers .offer-copy small{font-size:8px!important}
+  .checkout-offers .offer-copy strong{font-size:13px!important}
+  .checkout-offers .offer-copy em{
+    font-size:10px!important;
+    padding:3px 6px!important;
+  }
+  .checkout-offers .offer-price{
+    width:72px!important;
+  }
+  .checkout-offers .offer-price b{font-size:24px!important}
+}
