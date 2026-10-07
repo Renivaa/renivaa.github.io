@@ -637,3 +637,66 @@ main>section{content-visibility:visible;contain:none}
   .checkout-offers .offer-copy em{font-size:9px!important}
   .checkout-offers .offer-price b{font-size:24px!important}
 }
+
+
+/* v13 — separate offer copy from price */
+.checkout-offers .offer{
+  grid-template-columns:25px minmax(0,1fr) 105px!important;
+  column-gap:14px!important;
+  overflow:hidden!important;
+}
+.checkout-offers .offer-copy{
+  min-width:0!important;
+  width:100%!important;
+  overflow:hidden!important;
+  gap:12px!important;
+  padding-inline-end:8px!important;
+}
+.checkout-offers .offer-copy small,
+.checkout-offers .offer-copy strong,
+.checkout-offers .offer-copy em{
+  flex:0 0 auto!important;
+  white-space:nowrap!important;
+}
+.checkout-offers .offer-price{
+  width:105px!important;
+  min-width:105px!important;
+  text-align:center!important;
+  margin:0!important;
+  padding-inline-start:8px!important;
+  border-inline-start:1px solid #ddd5c9!important;
+}
+@media(max-width:700px){
+  .checkout-offers .offer{
+    grid-template-columns:22px minmax(0,1fr) 78px!important;
+    column-gap:8px!important;
+  }
+  .checkout-offers .offer-copy{
+    gap:6px!important;
+    padding-inline-end:4px!important;
+  }
+  .checkout-offers .offer-copy small{font-size:9px!important}
+  .checkout-offers .offer-copy strong{font-size:14px!important}
+  .checkout-offers .offer-copy em{font-size:9px!important}
+  .checkout-offers .offer-price{
+    width:78px!important;
+    min-width:78px!important;
+    padding-inline-start:6px!important;
+  }
+  .checkout-offers .offer-price b{font-size:25px!important}
+}
+@media(max-width:380px){
+  .checkout-offers .offer{
+    grid-template-columns:21px minmax(0,1fr) 70px!important;
+    column-gap:6px!important;
+  }
+  .checkout-offers .offer-copy{gap:4px!important}
+  .checkout-offers .offer-copy small{font-size:8px!important}
+  .checkout-offers .offer-copy strong{font-size:12px!important}
+  .checkout-offers .offer-copy em{font-size:8px!important}
+  .checkout-offers .offer-price{
+    width:70px!important;
+    min-width:70px!important;
+  }
+  .checkout-offers .offer-price b{font-size:23px!important}
+}
