@@ -530,3 +530,49 @@ main>section{content-visibility:visible;contain:none}
  .checkout-offers .offer-copy em{font-size:10px}
  .checkout-offers .offer-price b{font-size:26px}
 }
+
+/* Checkout typography boost v10 — maximum readability */
+.checkout-head h2{font-size:clamp(52px,7.8vw,76px);line-height:1.04}
+.checkout-head p{font-size:16px;line-height:2.05}
+.customer-intro{font-size:22px;margin-bottom:18px}
+.checkout-card{padding:36px 38px}
+.checkout-offers .offer{min-height:124px;padding:21px 19px}
+.checkout-offers .offer-copy strong{font-size:22px;line-height:1.5}
+.checkout-offers .offer-copy small{font-size:15px}
+.checkout-offers .offer-copy em{font-size:14px}
+.checkout-offers .offer-price b{font-size:38px}
+.checkout-offers .offer-price i{font-size:12px}
+.checkout-offers .offer .radio{width:25px;height:25px}
+.delivery-fields{gap:14px;margin-bottom:18px}
+.delivery-fields label{font-size:16px!important}
+.delivery-fields input{height:70px!important;font-size:20px!important;padding:0 18px!important}
+.checkout-card button{min-height:78px;font-size:21px}
+.checkout-card button b{width:46px;height:46px;font-size:22px}
+.checkout-bottom{font-size:11px;gap:17px}
+.checkout-note{font-size:12px;line-height:1.8}
+.bottom-note{font-size:16px}
+@media(max-width:700px){
+ .checkout-section{padding:58px 10px 74px}
+ .checkout-head h2{font-size:54px;line-height:1.04}
+ .checkout-head p{font-size:14px}
+ .checkout-card{padding:25px 18px}
+ .customer-intro{font-size:21px;margin-bottom:15px}
+ .checkout-offers .offer{min-height:100px;padding:15px 13px}
+ .checkout-offers .offer-copy strong{font-size:18px}
+ .checkout-offers .offer-copy small{font-size:13px}
+ .checkout-offers .offer-copy em{font-size:12px}
+ .checkout-offers .offer-price b{font-size:31px}
+ .checkout-offers .offer-price i{font-size:10px}
+ .delivery-fields label{font-size:15px!important}
+ .delivery-fields input{height:68px!important;font-size:19px!important}
+ .checkout-card button{min-height:72px;font-size:19px}
+ .checkout-bottom{font-size:10px}
+ .checkout-note{font-size:11px}
+}
+@media(max-width:380px){
+ .checkout-head h2{font-size:50px}
+ .checkout-card{padding:22px 14px}
+ .checkout-offers .offer-copy strong{font-size:17px}
+ .checkout-offers .offer-copy em{font-size:11px}
+ .checkout-offers .offer-price b{font-size:29px}
+}
