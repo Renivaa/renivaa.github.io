@@ -1009,3 +1009,10 @@ main>section{content-visibility:visible;contain:none}
  .topbar b{font-size:10px!important}
  .topbar span:last-child{font-size:9px!important}
 }
+
+
+/* RENIVA checkout heading spacing v26 */
+.checkout-section{padding-top:28px!important}
+.checkout-head{margin-top:0!important}
+@media(max-width:700px){.checkout-section{padding-top:20px!important}}
+@media(max-width:380px){.checkout-section{padding-top:16px!important}}
