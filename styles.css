@@ -700,3 +700,24 @@ main>section{content-visibility:visible;contain:none}
   }
   .checkout-offers .offer-price b{font-size:23px!important}
 }
+
+
+/* v14 — hard isolate price column */
+.checkout-offers .offer{display:grid!important;grid-template-columns:26px minmax(0,1fr) 112px!important;align-items:center!important;column-gap:12px!important;overflow:hidden!important}
+.checkout-offers .offer-copy{display:flex!important;min-width:0!important;max-width:100%!important;overflow:hidden!important;flex-wrap:nowrap!important;white-space:nowrap!important;gap:10px!important}
+.checkout-offers .offer-copy small,.checkout-offers .offer-copy strong,.checkout-offers .offer-copy em{min-width:0!important;max-width:100%!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+.checkout-offers .offer-price{grid-column:3!important;width:112px!important;min-width:112px!important;max-width:112px!important;margin:0!important;padding:4px 0 4px 10px!important;box-sizing:border-box!important;text-align:center!important;background:inherit!important;border-inline-start:1px solid #ddd5c9!important;z-index:3!important}
+@media(max-width:700px){
+.checkout-offers .offer{grid-template-columns:22px minmax(0,1fr) 82px!important;column-gap:7px!important}
+.checkout-offers .offer-copy{gap:5px!important}
+.checkout-offers .offer-copy small{font-size:9px!important}.checkout-offers .offer-copy strong{font-size:14px!important}.checkout-offers .offer-copy em{font-size:9px!important}
+.checkout-offers .offer-price{width:82px!important;min-width:82px!important;max-width:82px!important;padding-inline-start:5px!important}
+.checkout-offers .offer-price b{font-size:25px!important}
+}
+@media(max-width:380px){
+.checkout-offers .offer{grid-template-columns:21px minmax(0,1fr) 72px!important;column-gap:5px!important}
+.checkout-offers .offer-copy{gap:4px!important}
+.checkout-offers .offer-copy small{font-size:8px!important}.checkout-offers .offer-copy strong{font-size:12px!important}.checkout-offers .offer-copy em{font-size:8px!important}
+.checkout-offers .offer-price{width:72px!important;min-width:72px!important;max-width:72px!important}
+.checkout-offers .offer-price b{font-size:23px!important}
+}
