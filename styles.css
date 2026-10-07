@@ -363,3 +363,7 @@ main>section{content-visibility:visible;contain:none}
  .checkout-card button{min-height:58px;font-size:13px}
  .checkout-bottom{gap:8px;font-size:7px}
 }
+
+
+/* Sticky CTA state used by the Cosma-style checkout interaction. */
+.sticky.is-hidden{opacity:0;visibility:hidden;pointer-events:none;transform:translateX(-50%) translateY(16px);}
