@@ -1,13 +1,26 @@
 document.addEventListener("DOMContentLoaded",()=>{
   const form=document.getElementById("order-form");
   const message=document.getElementById("form-message");
+  const nameEl=document.getElementById("selected-offer-name");
+  const durationEl=document.getElementById("selected-offer-duration");
+  const priceEl=document.getElementById("selected-offer-price");
   if(!form)return;
 
-  form.querySelectorAll('input[name="offer"]').forEach(input=>{
-    input.addEventListener("change",()=>{
-      form.querySelectorAll(".offer").forEach(card=>card.classList.toggle("is-selected",card.querySelector('input[name="offer"]')?.checked===true));
+  const updateOffer=()=>{
+    form.querySelectorAll(".offer").forEach(card=>{
+      const input=card.querySelector('input[name="offer"]');
+      card.classList.toggle("is-selected",!!input?.checked);
     });
-  });
+    const selected=form.querySelector('input[name="offer"]:checked');
+    if(selected){
+      if(nameEl)nameEl.textContent=selected.dataset.label||"";
+      if(durationEl)durationEl.textContent=selected.dataset.duration||"";
+      if(priceEl)priceEl.textContent=selected.dataset.price||"";
+    }
+  };
+
+  form.querySelectorAll('input[name="offer"]').forEach(input=>input.addEventListener("change",updateOffer));
+  updateOffer();
 
   form.addEventListener("submit",event=>{
     event.preventDefault();
@@ -15,12 +28,11 @@ document.addEventListener("DOMContentLoaded",()=>{
       form.reportValidity();
       return;
     }
-    message.textContent="تم استلام بياناتك. سنتواصل معك لتأكيد الطلب قبل الشحن.";
+    message.textContent="تم التحقق من بيانات الطلب. سنتواصل معك لتأكيده قبل الشحن.";
     message.className="form-message success";
   });
 });
 
-/* RENIVA checkout navigation — same interaction model as the Cosma checkout. */
 function goToCheckout(){
   const target=document.getElementById("order");
   if(!target)return false;
