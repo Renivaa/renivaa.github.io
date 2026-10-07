@@ -576,3 +576,25 @@ main>section{content-visibility:visible;contain:none}
  .checkout-offers .offer-copy em{font-size:11px}
  .checkout-offers .offer-price b{font-size:29px}
 }
+
+
+/* Checkout offer layout v11 — horizontal clarity */
+.checkout-offers .offer{grid-template-columns:25px minmax(0,1fr) auto;grid-template-rows:auto;align-items:center}
+.checkout-offers .offer-copy{display:flex;flex-direction:row;align-items:center;gap:12px;min-width:0}
+.checkout-offers .offer-copy small{margin:0;flex:0 0 auto}
+.checkout-offers .offer-copy strong{margin:0;flex:0 0 auto}
+.checkout-offers .offer-copy em{margin:0;flex:0 0 auto}
+.checkout-divider{display:none!important}
+@media(max-width:700px){
+ .checkout-offers .offer{grid-template-columns:23px minmax(0,1fr) auto;padding:15px 12px}
+ .checkout-offers .offer-copy{gap:8px;flex-wrap:wrap;row-gap:2px}
+ .checkout-offers .offer-copy small{font-size:12px}
+ .checkout-offers .offer-copy strong{font-size:17px}
+ .checkout-offers .offer-copy em{font-size:11px}
+}
+@media(max-width:380px){
+ .checkout-offers .offer-copy{gap:6px}
+ .checkout-offers .offer-copy small{font-size:11px}
+ .checkout-offers .offer-copy strong{font-size:16px}
+ .checkout-offers .offer-copy em{font-size:10px}
+}
