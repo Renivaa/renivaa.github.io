@@ -9,10 +9,6 @@ document.addEventListener("DOMContentLoaded",()=>{
   const phoneEl=form.elements.phone;
   const cityEl=form.elements.city;
 
-  const selectedName=document.getElementById("selected-offer-name");
-  const selectedDuration=document.getElementById("selected-offer-duration");
-  const selectedPrice=document.getElementById("selected-offer-price");
-
   const setMessage=(text,type="")=>{
     message.textContent=text;
     message.className="form-message"+(type?" "+type:"");
@@ -25,9 +21,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
     const selected=form.querySelector('input[name="offer"]:checked');
     if(!selected)return;
-    selectedName.textContent=selected.dataset.label||"باقة RENIVA";
-    selectedDuration.textContent=selected.dataset.duration||"";
-    selectedPrice.textContent=selected.dataset.price||"";
     setMessage("");
   };
 
