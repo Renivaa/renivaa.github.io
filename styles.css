@@ -598,3 +598,42 @@ main>section{content-visibility:visible;contain:none}
  .checkout-offers .offer-copy strong{font-size:16px}
  .checkout-offers .offer-copy em{font-size:10px}
 }
+
+
+/* v12 — force offer details to remain on one horizontal line */
+.checkout-offers .offer-copy{
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:14px!important;
+  flex-wrap:nowrap!important;
+  white-space:nowrap!important;
+}
+.checkout-offers .offer-copy small,
+.checkout-offers .offer-copy strong,
+.checkout-offers .offer-copy em{
+  margin:0!important;
+  white-space:nowrap!important;
+  flex:0 0 auto!important;
+}
+.checkout-offers .offer-copy small{font-size:14px!important}
+.checkout-offers .offer-copy strong{font-size:21px!important}
+.checkout-offers .offer-copy em{font-size:13px!important}
+.checkout-offers .offer-price{margin-inline-start:auto!important}
+.checkout-divider{display:none!important}
+@media(max-width:700px){
+  .checkout-offers .offer-copy{gap:7px!important;white-space:nowrap!important}
+  .checkout-offers .offer-copy small{font-size:10px!important}
+  .checkout-offers .offer-copy strong{font-size:15px!important}
+  .checkout-offers .offer-copy em{font-size:10px!important}
+  .checkout-offers .offer{grid-template-columns:22px minmax(0,1fr) auto!important;gap:7px!important;padding:13px 9px!important}
+  .checkout-offers .offer-price b{font-size:27px!important}
+}
+@media(max-width:380px){
+  .checkout-offers .offer-copy{gap:5px!important}
+  .checkout-offers .offer-copy small{font-size:9px!important}
+  .checkout-offers .offer-copy strong{font-size:13px!important}
+  .checkout-offers .offer-copy em{font-size:9px!important}
+  .checkout-offers .offer-price b{font-size:24px!important}
+}
