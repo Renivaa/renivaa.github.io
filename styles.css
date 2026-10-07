@@ -1025,3 +1025,12 @@ main>section{content-visibility:visible;contain:none}
   .checkout-head .kicker{margin-top:0!important}
 }
 @media(max-width:380px){.checkout-section{padding-top:4px!important}}
+
+
+/* RENIVA remove mobile checkout top space v28 */
+@media(max-width:700px){
+  .checkout-section{padding-top:0!important;margin-top:0!important}
+  .checkout-shell{margin-top:0!important;padding-top:0!important}
+  .checkout-head{margin-top:0!important;padding-top:0!important}
+}
+@media(max-width:380px){.checkout-section{padding-top:0!important}}
