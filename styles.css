@@ -1016,3 +1016,12 @@ main>section{content-visibility:visible;contain:none}
 .checkout-head{margin-top:0!important}
 @media(max-width:700px){.checkout-section{padding-top:20px!important}}
 @media(max-width:380px){.checkout-section{padding-top:16px!important}}
+
+
+/* RENIVA mobile checkout top-gap fix v27 */
+@media(max-width:700px){
+  .checkout-section{padding-top:6px!important}
+  .checkout-head{margin-top:0!important;padding-top:0!important}
+  .checkout-head .kicker{margin-top:0!important}
+}
+@media(max-width:380px){.checkout-section{padding-top:4px!important}}
