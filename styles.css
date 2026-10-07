@@ -451,3 +451,42 @@ main>section{content-visibility:visible;contain:none}
 /* Final checkout cleanup */
 .customer-intro{font-size:15px;font-weight:800;color:#182a22;margin:0 0 13px}
 @media(max-width:700px){.customer-intro{font-size:14px;margin-bottom:11px}}
+
+
+/* Checkout typography boost v8 */
+.checkout-head h2{font-size:clamp(44px,6.5vw,64px)}
+.checkout-head p{font-size:13px}
+.customer-intro{font-size:17px}
+.checkout-offers .offer-copy strong{font-size:17px}
+.checkout-offers .offer-copy small{font-size:12px}
+.checkout-offers .offer-copy em{font-size:11px}
+.checkout-offers .offer-price b{font-size:30px}
+.checkout-offers .offer-price i{font-size:10px}
+.checkout-offers .offer{min-height:96px}
+.delivery-fields label{font-size:13px!important}
+.delivery-fields input{height:60px!important;font-size:16px!important}
+.checkout-card button{min-height:66px;font-size:17px}
+.checkout-bottom{font-size:9px}
+.checkout-note{font-size:10px}
+.bottom-note{font-size:13px}
+@media(max-width:700px){
+ .checkout-head h2{font-size:45px}
+ .checkout-head p{font-size:11px}
+ .customer-intro{font-size:16px}
+ .checkout-offers .offer{min-height:82px}
+ .checkout-offers .offer-copy strong{font-size:15px}
+ .checkout-offers .offer-copy small{font-size:10px}
+ .checkout-offers .offer-copy em{font-size:10px}
+ .checkout-offers .offer-price b{font-size:25px}
+ .checkout-offers .offer-price i{font-size:9px}
+ .delivery-fields label{font-size:12px!important}
+ .delivery-fields input{height:58px!important;font-size:16px!important}
+ .checkout-card button{min-height:64px;font-size:16px}
+ .checkout-bottom{font-size:8px}
+ .checkout-note{font-size:9px}
+}
+@media(max-width:380px){
+ .checkout-offers .offer-copy strong{font-size:14px}
+ .checkout-offers .offer-copy em{font-size:9px}
+ .checkout-offers .offer-price b{font-size:23px}
+}
