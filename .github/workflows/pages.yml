@@ -3,28 +3,66 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: pages
   cancel-in-progress: true
+
 jobs:
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - name: Validate Reniva site
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f index.html
+          test -f styles.css
+          test -f script.js
+          test -f RENIVA_01_hero.png
+          test -f .github/workflows/pages.yml
+          grep -q 'RENIVA®' index.html
+          grep -q 'styles.css?v=' index.html
+          grep -q 'id="order"' index.html
+          grep -q 'id="order-form"' index.html
+          echo "RENIVA source validation: OK"
+
+      - name: Write build identity
+        shell: bash
+        run: |
+          cat > build-info.json <<EOF
+          {
+            "product": "RENIVA",
+            "repository": "Renivaa/renivaa.github.io",
+            "commit": "${GITHUB_SHA}",
+            "run_id": "${GITHUB_RUN_ID}",
+            "run_number": "${GITHUB_RUN_NUMBER}",
+            "workflow": "${GITHUB_WORKFLOW}",
+            "generated_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          EOF
+          cat build-info.json
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .
+
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
