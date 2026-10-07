@@ -766,3 +766,104 @@ main>section{content-visibility:visible;contain:none}
 }
 .checkout-divider{display:none!important}
 .checkout-offers + .customer-intro{border-top:0!important;margin-top:0!important}
+
+
+/* RENIVA checkout rebuild v17 — clean, linear, mobile-first */
+.checkout-section{background:linear-gradient(180deg,#14231c 0%,#102019 100%);padding:68px 18px 78px}
+.checkout-shell{max-width:850px;margin:auto}
+.checkout-head{display:flex;align-items:flex-end;justify-content:space-between;gap:34px;margin-bottom:22px}
+.checkout-head>div:first-child{max-width:590px}
+.checkout-head h2{font-family:"Playfair Display","IBM Plex Sans Arabic",serif;font-size:clamp(44px,6.4vw,68px);line-height:1.05;letter-spacing:-.035em;margin:8px 0 13px;color:#fff}
+.checkout-head h2 em{font-style:normal;color:#d8bb7c}
+.checkout-head p{margin:0;color:#c8d1cb;font-size:13px;line-height:1.95}
+.checkout-head p strong{color:#fff}
+.checkout-trust{display:flex;flex-direction:column;align-items:flex-end;gap:7px;max-width:230px}
+.checkout-trust span{border:1px solid #ffffff25;border-radius:999px;padding:6px 10px;color:#dbe2dd;font-size:9px;white-space:nowrap}
+.checkout-card{max-width:720px;margin:0 auto;background:#fbf8f2;color:#18201c;border:1px solid #fff;border-radius:20px;padding:25px;box-shadow:0 28px 70px #050d0980}
+.checkout-step{display:flex;align-items:center;gap:11px;margin:0 0 13px}
+.step-number{width:31px;height:31px;flex:0 0 31px;border-radius:50%;display:grid;place-items:center;background:#182a22;color:#e0c386;border:1px solid #b79052;font:12px Georgia}
+.checkout-step strong{display:block;font-size:15px;line-height:1.25}
+.checkout-step small{display:block;color:#8a8176;font-size:9px;margin-top:2px}
+.checkout-offers{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:9px!important;margin:0!important}
+.checkout-offers .offer{position:relative!important;display:grid!important;grid-template-columns:20px minmax(0,1fr) 86px!important;grid-template-rows:1fr!important;align-items:center!important;column-gap:9px!important;min-width:0!important;min-height:96px!important;padding:14px 11px!important;background:#fff!important;border:1px solid #d8cfc2!important;border-radius:12px!important;overflow:visible!important;box-shadow:none!important}
+.checkout-offers .offer:hover{border-color:#b79052!important}
+.checkout-offers .offer:has(input:checked){border:1.5px solid #182a22!important;box-shadow:0 0 0 3px #182a2210,0 10px 25px #182a2215!important;background:#f8f4ec!important}
+.checkout-offers .offer input{position:absolute!important;opacity:0!important;pointer-events:none!important}
+.checkout-offers .offer .radio{grid-column:1!important;grid-row:1!important;width:20px!important;height:20px!important;border:1px solid #9c907f!important;border-radius:50%!important;display:grid!important;place-items:center!important}
+.checkout-offers .offer:has(input:checked) .radio{border-color:#182a22!important}
+.checkout-offers .offer:has(input:checked) .radio:after{content:""!important;width:10px!important;height:10px!important;background:#b79052!important;border-radius:50%!important}
+.checkout-offers .offer-copy{grid-column:2!important;grid-row:1!important;display:block!important;min-width:0!important;width:100%!important;overflow:hidden!important;direction:rtl!important;text-align:right!important}
+.checkout-offers .offer-copy small,.checkout-offers .offer-copy strong,.checkout-offers .offer-copy em{display:block!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;margin:0!important}
+.checkout-offers .offer-copy small{font-size:10px!important;color:#9a7947!important;line-height:1.35!important}
+.checkout-offers .offer-copy strong{font-size:14px!important;color:#182a22!important;line-height:1.4!important;margin-top:3px!important}
+.checkout-offers .offer-copy em{font-size:9px!important;color:#847b70!important;font-style:normal!important;line-height:1.35!important;margin-top:2px!important}
+.checkout-offers .offer-price{grid-column:3!important;grid-row:1!important;display:flex!important;align-items:baseline!important;justify-content:center!important;gap:3px!important;min-width:0!important;width:86px!important;margin:0!important;padding:6px 0 6px 9px!important;border-inline-start:1px solid #ddd4c7!important;background:transparent!important;white-space:nowrap!important;overflow:hidden!important;direction:rtl!important}
+.checkout-offers .offer-price b{font:600 28px/1 "Playfair Display",serif!important;color:#182a22!important}
+.checkout-offers .offer-price i{font:normal 9px "IBM Plex Sans Arabic"!important;color:#6d655c!important}
+.checkout-offers .badge{position:absolute!important;top:-10px!important;right:12px!important;background:#182a22!important;color:#fff!important;border-radius:999px!important;padding:4px 9px!important;font-size:8px!important;line-height:1.2!important;white-space:nowrap!important}
+.checkout-offers .badge.gold{background:#b79052!important}
+.checkout-summary{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:14px!important;margin-top:12px!important;padding:12px 14px!important;background:#eee8de!important;border:1px solid #d9cfc0!important;border-radius:11px!important}
+.checkout-summary>div:first-child{min-width:0!important;display:flex!important;flex-direction:column!important}
+.checkout-summary span{font-size:8px!important;color:#81786e!important}
+.checkout-summary strong{font-size:12px!important;color:#182a22!important;line-height:1.4!important}
+.checkout-summary small{font-size:9px!important;color:#81786e!important;margin-top:1px!important}
+.summary-price{display:flex!important;align-items:baseline!important;gap:4px!important;direction:rtl!important;white-space:nowrap!important}
+.summary-price b{font:600 27px/1 "Playfair Display",serif!important;color:#182a22!important}
+.summary-price span{font-size:9px!important;color:#625a50!important}
+.checkout-divider{height:1px!important;background:#ded5c8!important;margin:21px 0!important}
+.delivery-fields{display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px!important;margin-bottom:15px!important}
+.delivery-fields label:first-child{grid-column:1/-1!important}
+.delivery-fields label{display:block!important;margin:0!important;font-size:12px!important;font-weight:800!important;color:#3a433e!important}
+.delivery-fields input{display:block!important;width:100%!important;height:56px!important;margin-top:6px!important;padding:0 14px!important;border:1px solid #cfc6b9!important;border-radius:10px!important;background:#fff!important;color:#1d2420!important;font:15px "IBM Plex Sans Arabic"!important;outline:none!important;direction:rtl!important;text-align:right!important;transition:border-color .15s,box-shadow .15s!important}
+.delivery-fields input::placeholder{color:#aaa197!important}
+.delivery-fields input:focus{border-color:#b79052!important;box-shadow:0 0 0 3px #b7905222!important}
+.field-hint{display:block!important;font-size:8px!important;color:#8c8378!important;font-weight:400!important;margin-top:4px!important}
+.field-error{display:none!important;font-size:9px!important;color:#a7473c!important;font-weight:600!important;margin-top:4px!important}
+.delivery-fields label.has-error input{border-color:#b7473c!important;box-shadow:0 0 0 3px #b7473c12!important}
+.delivery-fields label.has-error .field-error{display:block!important}
+.checkout-card button{display:flex!important;align-items:center!important;justify-content:space-between!important;width:100%!important;min-height:66px!important;margin:0!important;padding:7px 12px 7px 17px!important;border:0!important;border-radius:11px!important;background:linear-gradient(135deg,#ddc181,#aa7d3e)!important;color:#1c160d!important;font:800 17px "IBM Plex Sans Arabic"!important;cursor:pointer!important;box-shadow:0 12px 28px #182a2228!important;transition:transform .15s,filter .15s!important}
+.checkout-card button:hover{filter:brightness(1.03)!important;transform:translateY(-1px)!important}
+.checkout-card button:disabled{opacity:.75!important;cursor:wait!important;transform:none!important}
+.checkout-card button b{display:grid!important;place-items:center!important;width:42px!important;height:42px!important;border-radius:9px!important;background:#20170b18!important;font-size:21px!important}
+.checkout-bottom{display:flex!important;justify-content:center!important;flex-wrap:wrap!important;gap:14px!important;margin-top:10px!important;color:#7e766d!important;font-size:9px!important}
+.checkout-bottom span{white-space:nowrap!important}
+.checkout-note{text-align:center!important;color:#8a8177!important;font-size:9px!important;line-height:1.8!important;margin:10px auto 0!important;max-width:600px!important}
+.checkout-card .form-message{min-height:18px!important;text-align:center!important;font-size:10px!important;margin:9px 0 0!important;color:#356446!important}
+.checkout-card .form-message.error{color:#a7473c!important}
+.bottom-note{text-align:center!important;color:#d8bb7c!important;font-size:12px!important;font-weight:700!important;margin:17px 0 0!important}
+.sticky.is-hidden{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translate(-50%,20px)!important}
+@media(max-width:700px){
+ .checkout-section{padding:55px 10px 74px!important}
+ .checkout-head{display:block!important;margin-bottom:18px!important;text-align:center!important}
+ .checkout-head>div:first-child{max-width:none!important}
+ .checkout-head h2{font-size:45px!important}
+ .checkout-head p{font-size:11px!important;line-height:1.9!important}
+ .checkout-trust{flex-direction:row!important;justify-content:center!important;align-items:center!important;flex-wrap:wrap!important;max-width:none!important;margin-top:13px!important}
+ .checkout-trust span{font-size:8px!important;padding:5px 8px!important}
+ .checkout-card{padding:20px 14px!important;border-radius:16px!important}
+ .checkout-step strong{font-size:14px!important}
+ .checkout-offers{grid-template-columns:1fr!important;gap:8px!important}
+ .checkout-offers .offer{grid-template-columns:22px minmax(0,1fr) 82px!important;min-height:78px!important;padding:11px 10px!important;column-gap:8px!important}
+ .checkout-offers .offer-copy small{font-size:9px!important}
+ .checkout-offers .offer-copy strong{font-size:14px!important}
+ .checkout-offers .offer-copy em{font-size:9px!important}
+ .checkout-offers .offer-price{width:82px!important;padding-inline-start:7px!important}
+ .checkout-offers .offer-price b{font-size:27px!important}
+ .checkout-summary{margin-top:10px!important;padding:11px 12px!important}
+ .summary-price b{font-size:25px!important}
+ .delivery-fields{grid-template-columns:1fr!important;gap:10px!important}
+ .delivery-fields label:first-child{grid-column:auto!important}
+ .delivery-fields input{height:58px!important;font-size:16px!important}
+ .checkout-card button{min-height:66px!important;font-size:16px!important}
+}
+@media(max-width:380px){
+ .checkout-head h2{font-size:41px!important}
+ .checkout-card{padding:18px 11px!important}
+ .checkout-offers .offer{grid-template-columns:20px minmax(0,1fr) 72px!important;column-gap:6px!important;min-height:74px!important}
+ .checkout-offers .offer-copy strong{font-size:13px!important}
+ .checkout-offers .offer-copy em{font-size:8px!important}
+ .checkout-offers .offer-price{width:72px!important}
+ .checkout-offers .offer-price b{font-size:24px!important}
+ .checkout-card button{font-size:15px!important}
+ .checkout-bottom{gap:9px!important;font-size:8px!important}
+}
