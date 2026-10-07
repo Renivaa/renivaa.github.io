@@ -1034,3 +1034,22 @@ main>section{content-visibility:visible;contain:none}
   .checkout-head{margin-top:0!important;padding-top:0!important}
 }
 @media(max-width:380px){.checkout-section{padding-top:0!important}}
+
+
+/* RENIVA link button typography v30 */
+.cta strong{font-size:19px!important;font-weight:800!important}
+.cta small{font-size:12px!important;font-weight:600!important}
+.sticky span b{font-size:16px!important;font-weight:800!important}
+.sticky span small{font-size:10px!important;font-weight:600!important}
+.sticky>strong{font-size:13px!important;font-weight:800!important}
+@media(max-width:700px){
+ .cta strong{font-size:18px!important}
+ .cta small{font-size:11px!important}
+ .sticky span b{font-size:15px!important}
+ .sticky span small{font-size:10px!important}
+ .sticky>strong{font-size:12px!important}
+}
+@media(max-width:380px){
+ .cta strong{font-size:17px!important}
+ .cta small{font-size:10px!important}
+}
