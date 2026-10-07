@@ -40,59 +40,79 @@
 <section class="order checkout-section" id="order">
   <div class="checkout-shell">
     <div class="checkout-head">
-      <span class="kicker light">RENIVA® · ORDER</span>
-      <h2>اختر باقتك<br><em>وأكمل طلبك.</em></h2>
-      <p>كلما زادت الكمية زاد التوفير — الدفع عند الاستلام</p>
-    </div>
-
-    <div class="checkout-trust" aria-label="مزايا الطلب">
-      <span>✓ دفع عند الاستلام</span>
-      <span>✓ طلب سريع وآمن</span>
-      <span>✓ تأكيد قبل الشحن</span>
+      <span class="kicker light">RENIVA® · الطلب</span>
+      <h2>اختر عرضك<br><em>وأكمل طلبك بسهولة.</em></h2>
+      <p>خطوتان فقط: اختر الباقة، ثم أدخل بيانات التوصيل. الدفع عند الاستلام.</p>
     </div>
 
     <form id="order-form" class="checkout-card">
-      <div class="checkout-label">اختر الباقة المناسبة لك</div>
+      <div class="checkout-step">
+        <span class="step-number">1</span>
+        <div><strong>اختر الباقة المناسبة لك</strong><small>اضغط على العرض الذي تريده — السعر النهائي واضح أمامك</small></div>
+      </div>
 
       <div class="checkout-offers">
         <label class="offer">
-          <input type="radio" name="offer" value="1" checked>
+          <input type="radio" name="offer" value="1" data-label="باقة البداية" data-price="169" data-duration="عبوة واحدة · تكفي شهرين" checked>
           <span class="radio"></span>
-          <span class="offer-copy"><strong>باقة البداية</strong><small>1 عبوة — تكفي شهرين</small></span>
-          <b>169 <i>ريال</i></b>
+          <span class="offer-copy">
+            <small>للتجربة</small>
+            <strong>باقة البداية</strong>
+            <em>عبوة واحدة · تكفي شهرين</em>
+          </span>
+          <span class="offer-price"><b>169</b><i>ريال</i></span>
         </label>
 
-        <label class="offer">
-          <input type="radio" name="offer" value="2">
+        <label class="offer recommended">
+          <span class="badge">الأكثر طلبًا</span>
+          <input type="radio" name="offer" value="2" data-label="باقة النتيجة الأفضل" data-price="199" data-duration="عبوتان · تكفيان 4 أشهر">
           <span class="radio"></span>
-          <span class="offer-copy"><strong>باقة التوفير</strong><small>2 عبوة — تكفي 4 أشهر</small></span>
-          <b>199 <i>ريال</i></b>
+          <span class="offer-copy">
+            <small>أفضل توازن</small>
+            <strong>باقة النتيجة الأفضل</strong>
+            <em>عبوتان · تكفيان 4 أشهر</em>
+          </span>
+          <span class="offer-price"><b>199</b><i>ريال</i></span>
         </label>
 
-        <label class="offer featured">
-          <span class="badge">أفضل قيمة</span>
-          <input type="radio" name="offer" value="3">
+        <label class="offer best-value">
+          <span class="badge gold">أعلى توفير</span>
+          <input type="radio" name="offer" value="3" data-label="باقة العناية الكاملة" data-price="219" data-duration="3 عبوات · تكفي 6 أشهر">
           <span class="radio"></span>
-          <span class="offer-copy"><strong>الباقة الذهبية</strong><small>3 عبوات — تكفي 6 أشهر</small></span>
-          <b>219 <i>ريال</i></b>
+          <span class="offer-copy">
+            <small>للاستخدام الطويل</small>
+            <strong>باقة العناية الكاملة</strong>
+            <em>3 عبوات · تكفي 6 أشهر</em>
+          </span>
+          <span class="offer-price"><b>219</b><i>ريال</i></span>
         </label>
+      </div>
+
+      <div class="checkout-summary" id="checkout-summary">
+        <div><span>اختيارك الحالي</span><strong id="selected-offer-name">باقة البداية</strong><small id="selected-offer-duration">عبوة واحدة · تكفي شهرين</small></div>
+        <div class="summary-price"><b id="selected-offer-price">169</b><span>ريال</span></div>
       </div>
 
       <div class="checkout-divider"></div>
 
-      <div class="checkout-label customer-label">بيانات التوصيل</div>
-      <div class="delivery-fields">
-        <label>الاسم الكامل<input name="name" autocomplete="name" placeholder="الاسم الكامل" required minlength="2"></label>
-        <label>رقم الجوال<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xxxxxxxx" required maxlength="14"></label>
-        <label>المدينة<input name="city" autocomplete="address-level2" placeholder="المدينة" required minlength="2"></label>
+      <div class="checkout-step">
+        <span class="step-number">2</span>
+        <div><strong>أين نرسل طلبك؟</strong><small>أدخل بيانات بسيطة وسنتواصل معك لتأكيد الطلب</small></div>
       </div>
 
-      <button type="submit"><span>إرسال الطلب — الدفع عند الاستلام</span><b>←</b></button>
-      <div class="checkout-bottom"><span>✓ الدفع عند الاستلام</span><span>✓ تأكيد قبل الشحن</span><span>✓ طلب سريع</span></div>
+      <div class="delivery-fields">
+        <label>الاسم الكامل<input name="name" autocomplete="name" placeholder="مثال: محمد أحمد" required minlength="2"></label>
+        <label>رقم الجوال<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xxxxxxxx" required maxlength="14"></label>
+        <label>المدينة<input name="city" autocomplete="address-level2" placeholder="مثال: الرياض" required minlength="2"></label>
+      </div>
+
+      <button type="submit"><span>تأكيد الطلب — الدفع عند الاستلام</span><b>←</b></button>
+      <div class="checkout-bottom"><span>✓ لا تدفع الآن</span><span>✓ الدفع عند الاستلام</span><span>✓ تأكيد قبل الشحن</span></div>
+      <p class="checkout-note">لن نطلب منك بيانات بطاقة بنكية. يتم التواصل معك لتأكيد تفاصيل الطلب قبل الشحن.</p>
       <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
     </form>
 
-    <p class="bottom-note">ابدأ روتينك مع RENIVA اليوم</p>
+    <p class="bottom-note">اختيار واضح. طلب أسرع. تجربة RENIVA أبسط.</p>
   </div>
 </section>
 
