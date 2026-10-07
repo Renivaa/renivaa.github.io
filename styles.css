@@ -1053,3 +1053,23 @@ main>section{content-visibility:visible;contain:none}
  .cta strong{font-size:17px!important}
  .cta small{font-size:10px!important}
 }
+
+
+/* RENIVA sticky CTA refinement v31 */
+.sticky{min-height:66px!important;padding:9px 12px 9px 17px!important;border-radius:16px!important;gap:14px!important}
+.sticky span{flex:1 1 auto!important;min-width:0!important;align-items:flex-end!important}
+.sticky span b{font-size:15px!important;letter-spacing:.02em!important}
+.sticky span small{font-size:12px!important;font-weight:800!important;margin-top:2px!important;line-height:1.35!important}
+.sticky>strong{font-size:12px!important;font-weight:800!important;padding:9px 11px!important;border-radius:11px!important;line-height:1.35!important;text-align:center!important}
+@media(max-width:700px){
+ .sticky{width:calc(100% - 18px)!important;min-height:64px!important;padding:8px 10px 8px 14px!important;gap:9px!important}
+ .sticky span b{font-size:14px!important}
+ .sticky span small{font-size:11px!important}
+ .sticky>strong{font-size:11px!important;padding:8px 9px!important}
+}
+@media(max-width:380px){
+ .sticky{width:calc(100% - 14px)!important;min-height:61px!important;padding:7px 8px 7px 11px!important;gap:7px!important}
+ .sticky span b{font-size:13px!important}
+ .sticky span small{font-size:10px!important}
+ .sticky>strong{font-size:10px!important;padding:7px 8px!important}
+}
