@@ -1,10 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
   const form=document.getElementById("order-form");
   const message=document.getElementById("form-message");
-  const nameEl=document.getElementById("selected-offer-name");
-  const durationEl=document.getElementById("selected-offer-duration");
-  const priceEl=document.getElementById("selected-offer-price");
-  if(!form)return;
+    if(!form)return;
 
   const updateOffer=()=>{
     form.querySelectorAll(".offer").forEach(card=>{
@@ -13,10 +10,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
     const selected=form.querySelector('input[name="offer"]:checked');
     if(selected){
-      if(nameEl)nameEl.textContent=selected.dataset.label||"";
-      if(durationEl)durationEl.textContent=selected.dataset.duration||"";
-      if(priceEl)priceEl.textContent=selected.dataset.price||"";
-    }
+          }
   };
 
   form.querySelectorAll('input[name="offer"]').forEach(input=>input.addEventListener("change",updateOffer));
