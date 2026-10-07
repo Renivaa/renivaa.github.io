@@ -977,3 +977,16 @@ main>section{content-visibility:visible;contain:none}
  .image-story{padding-top:14px!important}
  .story-copy{margin-top:16px!important}
 }
+
+
+/* RENIVA checkout-to-story spacing v24 */
+.checkout-section{padding-bottom:30px!important}
+.statement{padding-top:30px!important}
+@media(max-width:700px){
+ .checkout-section{padding-bottom:22px!important}
+ .statement{padding-top:22px!important}
+}
+@media(max-width:380px){
+ .checkout-section{padding-bottom:18px!important}
+ .statement{padding-top:18px!important}
+}
